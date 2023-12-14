@@ -15,10 +15,10 @@ public class NetworkUtils {
     private static final String PARAM_USER_ID = "user_ids";
     private static final String PARAM_VERSION = "v";
     private static final String ACCSESS_TOKEN = "access_token";
-    public static URL generateURL(String userId) {
+    public static URL generateURL(String userIds) {
         Uri builtUri = Uri.parse(VK_API_BASE_URL + VK_USERS_GET)
                 .buildUpon()
-                .appendQueryParameter(PARAM_USER_ID, userId)
+                .appendQueryParameter(PARAM_USER_ID, userIds)
                 .appendQueryParameter(PARAM_VERSION, "5.89")
                 .appendQueryParameter(ACCSESS_TOKEN,
                         "256a8cca256a8cca256a8ccad2267c11f32256a256a8cca4012140150991304f709307c")
